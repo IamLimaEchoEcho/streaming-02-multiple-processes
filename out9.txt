@@ -1,0 +1,14 @@
+Type,Title,Director,Country,DateAdded,ReleaseYear,Rating,Duration,Genres
+TV Show,Carmen Sandiego,,United States,15-Jan-21,2021,TV-Y7,4,"Kids TV, TV Thrillers"
+TV Show,Cobra Kai,,United States,1-Jan-21,2021,TV-14,3,"TV Action & Adventure, TV Dramas"
+Movie,"Crack: Cocaine, Corruption & Conspiracy",Stanley Nelson,United States,11-Jan-21,2021,TV-MA,90,Documentaries
+TV Show,Disenchantment,,United States,15-Jan-21,2021,TV-14,3,"TV Action & Adventure, TV Comedies, TV Sci-Fi & Fantasy"
+TV Show,Dream Home Makeover,,United States,1-Jan-21,2021,TV-G,2,Reality TV
+TV Show,Headspace Guide to Meditation,,United States,1-Jan-21,2021,TV-G,1,"Docuseries, Science & Nature TV"
+TV Show,History of Swear Words,,United States,5-Jan-21,2021,TV-MA,1,"Docuseries, TV Comedies"
+TV Show,Lupin,,United States,8-Jan-21,2021,TV-MA,1,"Crime TV Shows, International TV Shows, TV Action & Adventure"
+TV Show,Pretend Its a City,,United States,8-Jan-21,2021,TV-14,1,Docuseries
+TV Show,Surviving Death,,United States,6-Jan-21,2021,TV-MA,1,"Docuseries, Reality TV"
+Movie,The Minimalists: Less Is Now,,United States,1-Jan-21,2021,TV-14,54,Documentaries
+TV Show,The Netflix Afterparty,,United States,2-Jan-21,2021,TV-MA,1,"Stand-Up Comedy & Talk Shows, TV Comedies"
+Movie,What Would Sophia Loren Do,Ross Kauffman,United States,15-Jan-21,2021,TV-14,32,Documentaries
