@@ -1,3 +1,5 @@
+# Lee Jones
+
 # streaming-02-multiple-processes
 
 > Multiple processes accessing a shared resource concurrently
@@ -25,13 +27,41 @@ Read the output. Read the code.
 Try to figure out what's going on. 
 
 1. What libraries did we import?
+    import sqlite3
+    import time
+    import multiprocessing
+    import os
+    import datetime
+    import platform
+    import sys
 1. Where do we set the task_duration?
+    task_duration = 0 # TODO: increase this to 3 and see what happens
 1. How many functions are defined? 
+    7
 1. What are the function names? 
+        create_table
+        drop_table
+        insert_pet
+        process_one
+        process_two
+        process_three
+        recreate_database
 1. In general, what does each function do? 
+    create_table - connect to database, create table (via sql), execute SQL, commit, and close connection
+    drop_table - drops/closes the table
+    insert_pet - adds the name & breed to the table "pets"
+    process_one - inserts two dogs to pets
+    process_two - inserts a rabbit and dog to pets
+    process_three - insert rabbit and cat to pets
+    recreate_database - drops/deletes table and recreates table pets
 1. Where does the execution begin?
+    line 132 where it tests __name__ == "__main__"
+    per google: this code allows You to Execute Code When the File Runs as a Script, but Not When It's Imported as a Module. For most practical purposes, you can think of the conditional block that you open with if __name__ == "__main__" as a way to store code that should only run when your file is executed as a script.
+
 1. How many processes do we start?
+    3
 1. How many records does each process insert?
+    2
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
@@ -96,7 +126,9 @@ Python has pretty helpful error messages.
 When you get an error, read them carefully. 
 
 - What error do you get?
+    sqlite3.OperationalError: database is locked
 - Can you tell what line it was executing when it failed?
+    When it tried to execute line 95 to execute SQL, it was locked.  It was trying to insert line 106 (Cooper Rabbit)
 
 
 ## Database Is Locked Error
@@ -104,6 +136,9 @@ When you get an error, read them carefully.
 Do a web search on the sqlite3 'database is locked' error.
 
 - What do you learn?
+    This error code occurs when the user tries to perform two inappropriate operations on a database at the same detail and on the same database connection. This error code shows that an operation can’t be continued due to encounter with a transaction that uses the same database connection or the transaction that uses a distinct database connection by using a shared cache.
+
+
 - Once a process fails, it crashes the main process and everything stops. 
 
 ## Deadlock
